@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rules"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.seb.alquerquegame.RulesActivity">
+
+    <CheckBox
+        android:text="Rules 1: No Backwards Moves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rule1_check_box"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onCheckboxClicked"/>
+
+    <TextView
+        android:text="No Backwards Moves (and Sideways Capture Only on Back Row): If this rule applies, a piece may move sideways as well as diagonally or directly forwards, but cannot move backwards (either directly or diagonally). In addition, a piece that is situated on the opponent’s back row can only move if it is possible to execute a sideways capture."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule1_check_box"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rule1_descrip_tv" />
+
+    <CheckBox
+        android:text="Rule 2: Manditory Capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule1_descrip_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/rule2_check_box"
+        android:onClick="onCheckboxClicked"/>
+
+    <TextView
+        android:text="Mandatory Capture: If this rule applies then, if a piece can make a capture it must do so. If more than one capturing move is possible, then a player can make whichever of these (s)he prefers."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule2_check_box"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/rule2_descrip_tv" />
+</RelativeLayout>
